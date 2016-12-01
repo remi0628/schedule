@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="decision.css">
 		<title>schedule</title>
 	</head>
 	<body>
@@ -13,7 +13,7 @@
 				<li class="menu"><button type="submit" name="login">login</button></li>
 			</ul>
 		</div>
-		<h1 class="home">スケジュール管理</h1>
+		<h1 class="home">日程決める</h1>
 		<div class="choice">
 			<ul class="choice">
 				<li class="box"><button type="submit" name="decide">日程を決める</button></li>
