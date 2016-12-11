@@ -7,15 +7,13 @@ h1 {
 	text-align: center;
 }
 #menu_list {
-	margin: 0;
-	padding: 0;
 	border-bottom: 1px solid #d8d8d8;
 	display:block;
 }
 .menu {
 	list-style:none;
 	font-size: 0.9em;
-	margin-left: 10%;
+	display : inline-block;
 }
 .menu button {
 	background-color: #ffefd5;
@@ -25,8 +23,13 @@ h1 {
 table {
 	width: 100%;
 }
-table th {
+th {
 	background: #ffefd5;
+	height: 2em;
+}
+td {
+	font-size:0.8em;
+	height: 2em;
 }
 table th,
 table td {

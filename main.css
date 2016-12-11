@@ -11,11 +11,12 @@ div .menu_list{
 }
 #menu_list {
 	border-bottom: 1px solid #d8d8d8;
+	display:block;
 }
 .menu {
-	display: inline-block;
-	left: 1em;
+	list-style:none;
 	font-size: 0.9em;
+	display : inline-block;
 }
 .menu button {
 	background-color: #ffefd5;

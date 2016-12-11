@@ -33,16 +33,16 @@
 	<body>
 		<div class="menu_list" id="menu_list">
 			<ul class="menu">
-				<li class="menu"></li>
-				<li class="menu"></li>
+				<li class="menu"><button type="submit" name="">button</button></li>
+				<li class="menu"><button type="submit" name="">button</button></li>
 				<li class="menu"><button type="submit" name="login">login</button></li>
 			</ul>
 		</div>
-		<h1 class="home">日程決める</h1>
+		<h1 class="home">日程を決める</h1>
 		<div class="table">
 		<?php echo $year;?>年<?php echo $month;?>月のカレンダー
 			<table>
-				<tr>
+				<tr class="week">
 					<th>日</th>
 					<th>月</th>
 					<th>火</th>
@@ -51,14 +51,19 @@
 					<th>金</th>
 					<th>土</th>
 				</tr>
-				<tr id="week">
+				<tr class="day">
 				<?php $cnt = 0; ?>
 				<?php foreach ($calendar as $key => $value): ?>
-					<td>
+					<td class="day">
 					<?php $cnt++; ?>
 					<?php echo $value['day']; ?>
 					</td>
 				<?php if($cnt == 7): ?>
+				</tr>
+				<tr class="content">
+					<?php for ($s=0; $s < 7; $s++): ?>
+						<td class="content"></td>
+					<?php endfor; ?>
 				</tr>
 				<tr>
 				<?php $cnt = 0; ?>
