@@ -1,3 +1,28 @@
+<?php
+	$year = date('Y');
+	$month = date('n');
+	$last_day = date('j',mktime(0,0,0,$month + 1, 0, $year));//月末
+	$calendar = array();
+	$j = 0;
+	for($i = 1; $i < $last_day + 1; $i++) {
+		$week = date('w', mktime(0,0,0,$month, $i, $year));
+		if($i == 1) {
+			for($s = 1; $s <= $week; $s++) {
+				$calendar[$j]['day'] = '';
+				$j++;
+			}
+		}
+		$calendar[$j]['day'] = $i;
+		$j++;
+		if($i == $last_day) {
+			for($e = 1; $e <= 6 - $week; $e++) {
+				$calendar[$j]['day'] = '';
+				$j++;
+			}
+		}
+	}
+	$wstr = array('日', '月', '火', '水', '木', '金', '土');
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,10 +39,33 @@
 			</ul>
 		</div>
 		<h1 class="home">日程決める</h1>
-		<div class="choice">
-			<ul class="choice">
-				<li class="box"><button type="submit" name="decide">日程を決める</button></li>
-				<li class="box"><button type="submit" name="take">出欠を取る</button></li>
-			</ul>
+		<div class="table">
+		<?php echo $year;?>年<?php echo $month;?>月のカレンダー
+			<table>
+				<tr>
+					<th>日</th>
+					<th>月</th>
+					<th>火</th>
+					<th>水</th>
+					<th>木</th>
+					<th>金</th>
+					<th>土</th>
+				</tr>
+				<tr id="week">
+				<?php $cnt = 0; ?>
+				<?php foreach ($calendar as $key => $value): ?>
+					<td>
+					<?php $cnt++; ?>
+					<?php echo $value['day']; ?>
+					</td>
+				<?php if($cnt == 7): ?>
+				</tr>
+				<tr>
+				<?php $cnt = 0; ?>
+				<?php endif; ?>
+				<?php endforeach; ?>
+				</tr>
+			</table>
+		</div>
 	</body>
 </html>
