@@ -1,0 +1,57 @@
+html,body {
+	background-color: #ffefd5;
+	width: 100%;
+	font-family:"游ゴシック" , "Yu Gothic" , sans-serif; 
+	margin: 0;
+}
+h1 {
+	text-align: center;
+}
+div .menu_list{
+	float: left;
+}
+#menu_list {
+	border-bottom: 1px solid #d8d8d8;
+	display:block;
+}
+.menu {
+	list-style:none;
+	font-size: 0.9em;
+	display : inline-block;
+}
+.menu button {
+	background-color: #ffefd5;
+	border: 0.5px solid #888;
+	box-shadow: 0.5px 0.5px 0.5px 0.5px #aaa;
+}
+.up {
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	text-align: center;
+	border:1px solid #000;
+	background-color: #ffefd5;
+}
+.h2 {
+	padding-bottom: 0.5em;
+	border-bottom: 1px double #ccc;
+	text-align: left;
+}
+.event {
+	list-style: none;
+	font-size: 1em;
+	display: inline-block;
+}
+.day {
+	list-style: none;
+	font-size: 1em;
+	display: inline-block;
+}
+input, textarea {
+	width: 80%;
+}
+textarea {
+	vertical-align: top;
+	height: 4em;
+	resize: vertical;
+}
